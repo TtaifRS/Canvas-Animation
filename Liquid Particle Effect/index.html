@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquid Particle Effect</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="canvas1"></canvas>
+    <div class="container">
+      <div class="content">
+        <nav>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </nav>
+        <section class="main-block">
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium, velit. Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Aliquam dolorum ullam facere saepe numquam,
+              voluptatum impedit consectetur vero excepturi incidunt!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
+              quisquam sed, cupiditate quia placeat nisi praesentium consequatur
+              sapiente odio ea!
+            </p>
+          </div>
+          <section class="top-block">
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                temporibus iusto error quod hic voluptatum?
+              </p>
+            </div>
+          </section>
+          <section class="bottom-block">
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+              tempora.
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+    <svg>
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <FeColorMatrix
+            in="blur"
+            mode="matrix"
+            values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 19 -9"
+            result="goo"
+          />
+          <frCopmposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+    <script src="script.js"></script>
+  </body>
+</html>
